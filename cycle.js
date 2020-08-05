@@ -97,17 +97,17 @@ function bpmTap() {
 }
 
 document.addEventListener('keydown', function () {
-    if (event.keyCode === 65) { //If A is pressed, TAP!
+    if (event.keyCode === 65) { //If A is pressed, tap
         bpmTap();
-    } else if (event.keyCode === 32) { //If the Space bar is pressed, START or STOP the metronome!!
+    } else if (event.keyCode === 32) { //If the Space bar is pressed, START or STOP the metronome
         swStartStop();
-    } else if (event.keyCode === 68) { //If D is pressed, CHANGE THE SUBDIVISION!!!
+    } else if (event.keyCode === 68) { //If D is pressed, change the subdivision
         changeDiv();
-    } else if (event.keyCode === 87) { //If W is pressed, INCREASE THE NUMBER OF QUARTERS IN EACH COMPASS!!!!
+    } else if (event.keyCode === 87) { //If W is pressed, increase the number of quarters in each compass
         accentEach.value = parseInt(accentEach.value) + 1;
-    } else if (event.keyCode === 83) { //If S is pressed, DECREASE IT!!!!!!!!!!!!!
+    } else if (event.keyCode === 83) { //If S is pressed, decrease it
         accentEach.value = parseInt(accentEach.value) - 1;
-    } else if (event.keyCode === 13) { //If Enter is pressed, F O C U S  O N  B P M 
+    } else if (event.keyCode === 13) { //If Enter is pressed, focus on bpm
         if (bpmFocused == true) {
             bpmNum.blur();
             bpmFocused = !bpmFocused;
@@ -116,5 +116,11 @@ document.addEventListener('keydown', function () {
             bpmNum.focus();
             bpmFocused = !bpmFocused;
         }
-    } //Got a bit carried off, sorry.
+    } else if (event.keyCode === 38) { //If W is pressed, increase the bpm
+        event.preventDefault();
+        bpmNum.value = parseInt(bpmNum.value) + 5;
+    } else if (event.keyCode === 40) { //If S is pressed, decrease it
+        event.preventDefault();
+        bpmNum.value = parseInt(bpmNum.value) - 5;
+    }
 });
