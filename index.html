@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Personal metronome</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="./res/icon.ico">
+</head>
+
+<body>
+    <!--displays the number of the current beat-->
+    <p id="beatNum">1</p>
+    <!-- Title -->
+    <p class="titles">BPM: (ENTER)</p>
+    <!--input for bpm-->
+    <input type="number" id="bpmNum" min="20" max="240" value="60">
+    <!-- Title -->
+    <div id="Title1">
+        <table>
+            <tr>
+                <td class="titles">Accent: (W/S)</td>
+                <td class="titles">Division: (D)</td>
+            </tr>
+        </table>
+    </div>
+    <div id="accentDivision">
+        <!--accentEach changes the time signature and divisionEach allows for subdivisions of the beat-->
+        <input type="number" id="accentEach" min="2" max="8" value="4"><input type="button" id="divisionEach"
+            value="Every 1" onclick="changeDiv()">
+    </div>
+    <!-- Title -->
+    <div id="Title2">
+        <table>
+            <tr>
+                <td class="titles">Start (SPACE)</td>
+                <td class="titles">Tap (A)</td>
+            </tr>
+        </table>
+    </div>
+    <!--start or stop the metronome cycle and the Tap button-->
+    <input type="button" id="startStop" value="Start" onclick="swStartStop()"><input type="button" id="tapButton"
+        value="Tap" onclick="bpmTap()">
+
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="cycle.js"></script>
+
+</body>
+
+</html>

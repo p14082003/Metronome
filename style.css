@@ -1,0 +1,70 @@
+html {
+    /* general setup */
+    background-color: #05668D;
+    text-align: center;
+    font-family: Roboto, Arial, Helvetica;
+}
+
+#beatNum {
+    /* number displayed above, keeps track of the beat, not subdivided */
+    color: #F0F3BD;
+    font-size: 4em;
+    margin: 0px;
+}
+
+#bpmNum {
+    /* full width bpm imput and start/stop button */
+    width: 20%;
+}
+
+#accentEach,
+#divisionEach,
+#startStop,
+#tapButton {
+    /* half width accent and subdivision buttons */
+    width: 10%;
+}
+
+input {
+    /* settings for all 4 inputs */
+    padding: 0px;
+    background-color: #028090;
+    color: #F0F3BD;
+    font-size: 2.5em;
+    text-align: center;
+    border: 1px solid #02C39A;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.titles {
+    /* Every title like "BPM:" or "Tap (A)" */
+    color: #F0F3BD;
+    font-size: 1.5em;
+    margin: 0px;
+}
+
+table {
+    /* Enables two <p> in the same line */
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    background-color: #028090;
+    border-radius: 2px;
+}
+
+td {
+    /* 50% of the table, essentially creates two equally wide spaces */
+    width: 50%;
+    text-align: center;
+}
+
+/* These two below are used to remove the weird arrowsto the right of the number inputs */
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
