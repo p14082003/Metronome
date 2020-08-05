@@ -112,6 +112,7 @@ document.addEventListener('keydown', function () {
             bpmNum.blur();
             bpmFocused = !bpmFocused;
         } else if (bpmFocused == false) {
+            bpmNum.value = "";
             bpmNum.focus();
             bpmFocused = !bpmFocused;
         }
