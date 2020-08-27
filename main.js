@@ -17,6 +17,7 @@ function swStartStop() {
         currentBeat = 0;
         startStop.value = "Start";
     }
+    startStop.blur();
 }
 
 //cycles between subdivisions. 0 = shuffle subdivision; 1 = no subdivision; 2, 3, 4 = 2, 3, 4 subdivisions
