@@ -94,6 +94,7 @@ function bpmTap() {
         tapAvg = 0; //Say we average the tempo, play a while, and then try again. All that time...
         beatNum.style.color = "#F0F3BD"; //...we waited would throw our average off balance, so I implemented this auto reset
     }, 3500);
+    document.getElementById('tapButton').blur();
 }
 
 document.addEventListener('keydown', function () {

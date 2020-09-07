@@ -29,5 +29,5 @@ function changeDiv() {
         division = 0;
         divisionEach.value = "Shuffle";
     }
-
+    divisionEach.blur();
 }
